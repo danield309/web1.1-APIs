@@ -3,24 +3,24 @@
 
 <section>
     {#
-        TODO: Replace the hard-coded city and date below with data from the 
-        server 
+        TODO: Replace the hard-coded city and date below with data from the
+        server
     #}
-    <h1>Weather in San Francisco</h1>
-    <p>on Saturday, August 29, 2020</p>
-    
+    <h1>Weather in {{ city }}</h1>
+    <p>on {{ date }} {{ timezone }}</p>
+
     {#
         TODO: Add the temperature, description, humidity, wind speed, sunrise,
         & sunset below. Replace 'F' with the appropriate units.
     #}
     <ul>
-        <li>Temperature: ° F</li>
-        <li>Description: </li>
-        <li>Humidity: %</li>
-        <li>Wind speed:  miles/hour</li>
-        <li>Sunrise: </li>
-        <li>Sunset: </li>
+      <li>Temperature: {{ temp }}° {{ temp_unit }}</li>
+        <li>Description: {{ description }}</li>
+        <li>Humidity: {{ humidity }}%</li>
+        <li>Wind speed:  {{ wind_speed }} {{ speed_unit }}</li>
+        <li>Sunrise: {{ sunrise }} {{ timezone }} </li>
+        <li>Sunset: {{ sunset }} {{ timezone }}</li>
     </ul>
-    
+
 </section>
 {% endblock %}
